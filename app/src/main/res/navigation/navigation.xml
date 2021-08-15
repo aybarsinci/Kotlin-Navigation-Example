@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/login">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.loginscreennav.login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_afterLogin"
+            app:destination="@id/afterLogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/afterLogin"
+        android:name="com.example.loginscreennav.afterLogin"
+        android:label="fragment_after_login"
+        tools:layout="@layout/fragment_after_login" >
+        <action
+            android:id="@+id/action_afterLogin_to_login"
+            app:destination="@id/login" />
+    </fragment>
+</navigation>
