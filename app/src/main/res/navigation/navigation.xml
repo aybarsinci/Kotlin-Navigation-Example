@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_login_to_afterLogin"
             app:destination="@id/afterLogin" />
+        <action
+            android:id="@+id/action_login_to_signUpScreen"
+            app:destination="@id/signUpScreen" />
     </fragment>
     <fragment
         android:id="@+id/afterLogin"
@@ -21,6 +24,23 @@
         tools:layout="@layout/fragment_after_login" >
         <action
             android:id="@+id/action_afterLogin_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpScreen"
+        android:name="com.example.loginscreennav.SignUpScreen"
+        android:label="SignUpScreen" >
+        <action
+            android:id="@+id/action_signUpScreen_to_signUpSuccesfull"
+            app:destination="@id/signUpSuccesfull" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpSuccesfull"
+        android:name="com.example.loginscreennav.signUpSuccesfull"
+        android:label="fragment_sign_up_succesfull"
+        tools:layout="@layout/fragment_sign_up_succesfull" >
+        <action
+            android:id="@+id/action_signUpSuccesfull_to_login"
             app:destination="@id/login" />
     </fragment>
 </navigation>
